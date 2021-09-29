@@ -11,12 +11,15 @@ async function runAction() {
       return
     }
 
-    const { packageName: package_name, version } = packageInfo
+    const { scope, packageName: package_name, version } = packageInfo
+
     core.setOutput('package_name', package_name)
     core.setOutput('version', version)
+    core.setOutput('scope', scope)
 
     core.exportVariable('LERNA_PACKAGE_NAME', package_name)
     core.exportVariable('LERNA_PACKAGE_VERSION', version)
+    core.exportVariable('LERNA_PACKAGE_SCOPE', scope)
   } catch (error) {
     core.setFailed(error.message)
   }
