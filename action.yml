@@ -1,0 +1,10 @@
+name: 'Lerna Tag Parser'
+description: 'Parse Lerna tag for publishing packages independently'
+outputs:
+  package_name:
+    description: 'The Lerna package name'
+  version:
+    description: 'The Lerna package version'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
