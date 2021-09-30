@@ -4,7 +4,11 @@ import parse from "./parse";
 
 async function runAction() {
   try {
+    core.debug(`Context REF => ${github.context.ref}`);
+
     const packageInfo = parse(github.context.ref)
+
+    core.debug(`Parsed Info from Ref => ${JSON.stringify(packageInfo)}`)
 
     if (!packageInfo) {
       core.warning("We couldn't detect Lerna syntax tag")
@@ -12,6 +16,10 @@ async function runAction() {
     }
 
     const { scope, packageName, version } = packageInfo
+
+    core.debug(`Parsed Scope => ${scope}`)
+    core.debug(`Parsed Package Name => ${packageName}`)
+    core.debug(`Parsed Package Version => ${version}`)
 
     core.setOutput('package_name', packageName)
     core.setOutput('version', version)
