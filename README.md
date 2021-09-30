@@ -59,7 +59,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: igor-lemon/lerna-package-tag@0.0.3
+      - uses: igor-lemon/lerna-package-tag@0.0.4
         id: lerna-package
         
       - name: Build and deploy the Core SDK
