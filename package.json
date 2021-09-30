@@ -1,8 +1,8 @@
 {
   "name": "lerna-package-tag",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Package name and version parser for Lerna packages",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "repository": "git@github.com:igor-lemon/lerna-package-tag.git",
   "author": "Igor Kozlovsky <igor.lemon.kozlovsky@gmail.com>",
   "license": "MIT",

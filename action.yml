@@ -1,6 +1,8 @@
 name: 'Lerna Tag Parser'
 description: 'Parse Lerna tag for publishing packages independently'
 outputs:
+  scope:
+    description: 'The Lerna package scope'
   package_name:
     description: 'The Lerna package name'
   version:
