@@ -53,13 +53,13 @@ name: Deploy Lerna Packages
 on:
   push:
     tags:
-      - '*'
+      - '**@[0-9]+.[0-9]+.[0-9]+'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: igor-lemon/lerna-package-tag@0.0.2
+      - uses: igor-lemon/lerna-package-tag@0.0.3
         id: lerna-package
         
       - name: Build and deploy the Core SDK
